@@ -1,5 +1,5 @@
 //
-//  BSLViewController.h
+//  BSLCentralViewController.h
 //  beaconWorkbench
 //
 //  Created by Brian Clubb on 11/20/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSLViewController : UIViewController
+@interface BSLCentralViewController : UIViewController
 
 @end

@@ -15,13 +15,16 @@
 		755D5A39183D9465008680FB /* BSLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A38183D9465008680FB /* BSLAppDelegate.m */; };
 		755D5A3C183D9465008680FB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755D5A3A183D9465008680FB /* Main_iPhone.storyboard */; };
 		755D5A3F183D9465008680FB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755D5A3D183D9465008680FB /* Main_iPad.storyboard */; };
-		755D5A42183D9465008680FB /* BSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A41183D9465008680FB /* BSLViewController.m */; };
 		755D5A44183D9465008680FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755D5A43183D9465008680FB /* Images.xcassets */; };
 		755D5A4B183D9465008680FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D5A4A183D9465008680FB /* XCTest.framework */; };
 		755D5A4C183D9465008680FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D5A28183D9465008680FB /* Foundation.framework */; };
 		755D5A4D183D9465008680FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D5A2C183D9465008680FB /* UIKit.framework */; };
 		755D5A55183D9465008680FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 755D5A53183D9465008680FB /* InfoPlist.strings */; };
 		755D5A57183D9465008680FB /* beaconWorkbenchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A56183D9465008680FB /* beaconWorkbenchTests.m */; };
+		755D5A61183DB764008680FB /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D5A60183DB764008680FB /* CoreBluetooth.framework */; };
+		755D5A64183DB847008680FB /* BSLCentralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A63183DB847008680FB /* BSLCentralViewController.m */; };
+		755D5A67183DB867008680FB /* BSLPeripheralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A66183DB867008680FB /* BSLPeripheralViewController.m */; };
+		755D5A6A183E3035008680FB /* BSLThermostatPeripheralService.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A69183E3035008680FB /* BSLThermostatPeripheralService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +50,19 @@
 		755D5A38183D9465008680FB /* BSLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSLAppDelegate.m; sourceTree = "<group>"; };
 		755D5A3B183D9465008680FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		755D5A3E183D9465008680FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		755D5A40183D9465008680FB /* BSLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSLViewController.h; sourceTree = "<group>"; };
-		755D5A41183D9465008680FB /* BSLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSLViewController.m; sourceTree = "<group>"; };
 		755D5A43183D9465008680FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		755D5A49183D9465008680FB /* beaconWorkbenchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beaconWorkbenchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		755D5A4A183D9465008680FB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		755D5A52183D9465008680FB /* beaconWorkbenchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "beaconWorkbenchTests-Info.plist"; sourceTree = "<group>"; };
 		755D5A54183D9465008680FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		755D5A56183D9465008680FB /* beaconWorkbenchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beaconWorkbenchTests.m; sourceTree = "<group>"; };
+		755D5A60183DB764008680FB /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		755D5A62183DB847008680FB /* BSLCentralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLCentralViewController.h; sourceTree = "<group>"; };
+		755D5A63183DB847008680FB /* BSLCentralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLCentralViewController.m; sourceTree = "<group>"; };
+		755D5A65183DB867008680FB /* BSLPeripheralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLPeripheralViewController.h; sourceTree = "<group>"; };
+		755D5A66183DB867008680FB /* BSLPeripheralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLPeripheralViewController.m; sourceTree = "<group>"; };
+		755D5A68183E3035008680FB /* BSLThermostatPeripheralService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLThermostatPeripheralService.h; sourceTree = "<group>"; };
+		755D5A69183E3035008680FB /* BSLThermostatPeripheralService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLThermostatPeripheralService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755D5A61183DB764008680FB /* CoreBluetooth.framework in Frameworks */,
 				755D5A2B183D9465008680FB /* CoreGraphics.framework in Frameworks */,
 				755D5A2D183D9465008680FB /* UIKit.framework in Frameworks */,
 				755D5A29183D9465008680FB /* Foundation.framework in Frameworks */,
@@ -103,6 +112,7 @@
 		755D5A27183D9465008680FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				755D5A60183DB764008680FB /* CoreBluetooth.framework */,
 				755D5A28183D9465008680FB /* Foundation.framework */,
 				755D5A2A183D9465008680FB /* CoreGraphics.framework */,
 				755D5A2C183D9465008680FB /* UIKit.framework */,
@@ -118,10 +128,14 @@
 				755D5A38183D9465008680FB /* BSLAppDelegate.m */,
 				755D5A3A183D9465008680FB /* Main_iPhone.storyboard */,
 				755D5A3D183D9465008680FB /* Main_iPad.storyboard */,
-				755D5A40183D9465008680FB /* BSLViewController.h */,
-				755D5A41183D9465008680FB /* BSLViewController.m */,
 				755D5A43183D9465008680FB /* Images.xcassets */,
 				755D5A2F183D9465008680FB /* Supporting Files */,
+				755D5A62183DB847008680FB /* BSLCentralViewController.h */,
+				755D5A63183DB847008680FB /* BSLCentralViewController.m */,
+				755D5A65183DB867008680FB /* BSLPeripheralViewController.h */,
+				755D5A66183DB867008680FB /* BSLPeripheralViewController.m */,
+				755D5A68183E3035008680FB /* BSLThermostatPeripheralService.h */,
+				755D5A69183E3035008680FB /* BSLThermostatPeripheralService.m */,
 			);
 			path = beaconWorkbench;
 			sourceTree = "<group>";
@@ -254,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755D5A6A183E3035008680FB /* BSLThermostatPeripheralService.m in Sources */,
+				755D5A67183DB867008680FB /* BSLPeripheralViewController.m in Sources */,
 				755D5A39183D9465008680FB /* BSLAppDelegate.m in Sources */,
-				755D5A42183D9465008680FB /* BSLViewController.m in Sources */,
+				755D5A64183DB847008680FB /* BSLCentralViewController.m in Sources */,
 				755D5A35183D9465008680FB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +491,7 @@
 				755D5A5C183D9465008680FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		755D5A5D183D9465008680FB /* Build configuration list for PBXNativeTarget "beaconWorkbenchTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +500,7 @@
 				755D5A5F183D9465008680FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
