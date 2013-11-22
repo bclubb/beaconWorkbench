@@ -7,11 +7,14 @@
 //
 
 #import "BSLPeripheralViewController.h"
+#import "BSLThermostatPeripheral.h"
 
 @interface BSLPeripheralViewController ()
 
 @property NSNumber *currentTemperatureValue;
 @property NSNumber *desiredTemperatureValue;
+
+@property BSLThermostatPeripheral *thermostatPeripheral;
 
 @end
 
@@ -21,8 +24,9 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _currentTemperatureValue = [NSNumber numberWithFloat:52.0];
         _desiredTemperatureValue = [NSNumber numberWithFloat:62.0];
+        _thermostatPeripheral = [BSLThermostatPeripheral current];
+        [_thermostatPeripheral addObserver:self forKeyPath:@"currentTemperature" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
 }
@@ -48,16 +52,21 @@
     [self updateDisplay];
 }
 
--(IBAction)changeCurrentTemperature:(id)sender{
-    _currentTemperatureValue = [NSNumber numberWithFloat:(100*random())];
-    [self updateDisplay];
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"currentTemperature"]) {
+        _currentTemperature = [change objectForKey:NSKeyValueChangeNewKey];
+        [self updateDisplay];
+    }
 }
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc{
+    [_thermostatPeripheral removeObserver:self forKeyPath:@"currentTemperature"];
 }
 
 @end

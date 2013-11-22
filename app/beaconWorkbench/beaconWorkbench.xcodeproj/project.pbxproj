@@ -24,7 +24,7 @@
 		755D5A61183DB764008680FB /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D5A60183DB764008680FB /* CoreBluetooth.framework */; };
 		755D5A64183DB847008680FB /* BSLCentralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A63183DB847008680FB /* BSLCentralViewController.m */; };
 		755D5A67183DB867008680FB /* BSLPeripheralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A66183DB867008680FB /* BSLPeripheralViewController.m */; };
-		755D5A6A183E3035008680FB /* BSLThermostatPeripheralService.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A69183E3035008680FB /* BSLThermostatPeripheralService.m */; };
+		755D5A6A183E3035008680FB /* BSLThermostatPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 755D5A69183E3035008680FB /* BSLThermostatPeripheral.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		755D5A63183DB847008680FB /* BSLCentralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLCentralViewController.m; sourceTree = "<group>"; };
 		755D5A65183DB867008680FB /* BSLPeripheralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLPeripheralViewController.h; sourceTree = "<group>"; };
 		755D5A66183DB867008680FB /* BSLPeripheralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLPeripheralViewController.m; sourceTree = "<group>"; };
-		755D5A68183E3035008680FB /* BSLThermostatPeripheralService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLThermostatPeripheralService.h; sourceTree = "<group>"; };
-		755D5A69183E3035008680FB /* BSLThermostatPeripheralService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLThermostatPeripheralService.m; sourceTree = "<group>"; };
+		755D5A68183E3035008680FB /* BSLThermostatPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLThermostatPeripheral.h; sourceTree = "<group>"; };
+		755D5A69183E3035008680FB /* BSLThermostatPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLThermostatPeripheral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +134,8 @@
 				755D5A63183DB847008680FB /* BSLCentralViewController.m */,
 				755D5A65183DB867008680FB /* BSLPeripheralViewController.h */,
 				755D5A66183DB867008680FB /* BSLPeripheralViewController.m */,
-				755D5A68183E3035008680FB /* BSLThermostatPeripheralService.h */,
-				755D5A69183E3035008680FB /* BSLThermostatPeripheralService.m */,
+				755D5A68183E3035008680FB /* BSLThermostatPeripheral.h */,
+				755D5A69183E3035008680FB /* BSLThermostatPeripheral.m */,
 			);
 			path = beaconWorkbench;
 			sourceTree = "<group>";
@@ -217,6 +217,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Bubblesort Laboratories LLC";
 				TargetAttributes = {
+					755D5A24183D9465008680FB = {
+						DevelopmentTeam = E567KT9632;
+					};
 					755D5A48183D9465008680FB = {
 						TestTargetID = 755D5A24183D9465008680FB;
 					};
@@ -268,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				755D5A6A183E3035008680FB /* BSLThermostatPeripheralService.m in Sources */,
+				755D5A6A183E3035008680FB /* BSLThermostatPeripheral.m in Sources */,
 				755D5A67183DB867008680FB /* BSLPeripheralViewController.m in Sources */,
 				755D5A39183D9465008680FB /* BSLAppDelegate.m in Sources */,
 				755D5A64183DB847008680FB /* BSLCentralViewController.m in Sources */,
@@ -409,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "beaconWorkbench/beaconWorkbench-Prefix.pch";
 				INFOPLIST_FILE = "beaconWorkbench/beaconWorkbench-Info.plist";
@@ -422,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "beaconWorkbench/beaconWorkbench-Prefix.pch";
 				INFOPLIST_FILE = "beaconWorkbench/beaconWorkbench-Info.plist";

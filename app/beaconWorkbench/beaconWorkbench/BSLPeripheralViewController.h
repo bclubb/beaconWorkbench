@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSLThermostatPeripheral.h"
 
 @interface BSLPeripheralViewController : UIViewController
 
@@ -15,6 +16,5 @@
 
 -(IBAction)increaseTemperature:(id)sender;
 -(IBAction)decreaseTemperature:(id)sender;
--(IBAction)changeCurrentTemperature:(id)sender;
 
 @end
