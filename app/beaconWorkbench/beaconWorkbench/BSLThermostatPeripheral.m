@@ -19,7 +19,6 @@
 @property BOOL poweredOn;
 @property BOOL poweredOff;
 
-
 -(NSData*)currentTemperatureData;
 
 @end
@@ -69,8 +68,9 @@
         NSNumber *newTemperature = [change objectForKey:NSKeyValueChangeNewKey];
         NSData *updatedTemperature = [NSData dataWithBytes:&newTemperature length:sizeof(newTemperature) ];
         _thermostatCurrentTempCharacteristic.value = updatedTemperature;
-        
+        NSLog(@"Temperature changed");
         if (_poweredOn) {
+            NSLog(@"Temperature changed - Notified Centrals");
             [_manager updateValue:updatedTemperature forCharacteristic:_thermostatCurrentTempCharacteristic onSubscribedCentrals:nil];
         }
     }
@@ -93,12 +93,13 @@ static BSLThermostatPeripheral * _current = NULL;
 #pragma CBPeripheralManagerDelegateMethods
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral{
+    NSLog(@"Power State: %d", peripheral.state);
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
-        [self setupPeripheral];
         _poweredOn = YES;
         _poweredOff = NO;
+        [self setupPeripheral];
         NSLog(@"Powered On");
-    } if(peripheral.state < CBPeripheralManagerStatePoweredOff) {
+    } else if(peripheral.state < CBPeripheralManagerStatePoweredOff) {
         _poweredOff = YES;
         _poweredOn = NO;
         NSLog(@"Powered On");
